@@ -1,0 +1,6 @@
+.DS_store
+Groot2/
+*.run
+*.cache
+*.local
+*.config
