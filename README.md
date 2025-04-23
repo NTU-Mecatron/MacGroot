@@ -1,8 +1,8 @@
 ## Groot For Mac
 > [!NOTE]
-> Prerequisites: 
-> [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-> XQuartz `brew install --cask xquartz`
+Prerequisites: 
+> - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+> - XQuartz `brew install --cask xquartz`
 
 ### Build Docker Container and run XQuartz for the first time
 ```
