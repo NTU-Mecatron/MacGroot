@@ -1,0 +1,25 @@
+#name: groot_pipeline
+
+services:
+  groot:
+    build:
+      context: ./GROOT_DI
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    image: groot_image
+    container_name: ${TDGS_CONTAINER_NAME:-groot_v1}
+    network_mode: host
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t
+    privileged: ${PRIVILEGED_MODE:-true}
+    volumes:
+      - ./GROOT_DI:/root
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /tmp/.docker.xauth:/tmp/.docker.xauth
+    environment:
+      - DISPLAY=docker.for.mac.host.internal:0
+      - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=/tmp/.docker.xauth
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    command: ["bash", "/root/install_groot.sh"]
