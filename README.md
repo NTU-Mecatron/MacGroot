@@ -1,4 +1,7 @@
-## Groot For Mac
+# Groot For Mac
+### HOST: docker.for.mac.host.internal
+### PORT: 1667
+
 > [!NOTE]
 Prerequisites: 
 > - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
