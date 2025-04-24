@@ -19,13 +19,18 @@ cd MacGroot
 > - **In XQuartz Settings > Security > Tick "Allow Connections from network clients"**
 > - **Restart Your Mac (only needed once)**
 
-### Run container and install Groot2
+### Start up container and install Groot2
 ```
 cd MacGroot
+./up.sh
 ./run.sh
 ./install_groot.sh
 ```
-### To Run within the Docker Image again
+### To run within the Docker Image again
 ```
 ./start_groot.sh
+```
+### To stop container
+```
+./down.sh
 ```
